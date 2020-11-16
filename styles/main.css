@@ -1,0 +1,58 @@
+/* Variables */
+:root {
+    --primary: #ED6B61;
+    --secondary: #294282;
+}
+
+/* Reset styles */
+body, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+
+/* Base styles */
+body {
+    font-family: 'Oxygen Regular', Arial, sans-serif;
+}
+.button {
+    background: none;
+    border: 2px solid #ccc;
+    padding: 10px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: .2s;
+}
+.button:hover {
+    border: solid 2px var(--primary);
+    color: var(--primary);
+}
+
+/* Font */
+@font-face {
+    font-family: 'Oxygen Regular';
+    src: url("../fonts/Oxygen-Regular.ttf");
+}
+h1, h2, h3, h4 {
+    font-weight: normal;
+    color: #4c4c4c;
+}
+p, a, li {
+    color: #626262;
+}
+
+/* Mobile styles */
+
+/* Tablet styles */
+@media screen and (min-width: 960px){
+
+}
+
+/* Desktop/Laptop styles */
+@media screen and (min-width: 1024px){
+
+}
