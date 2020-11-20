@@ -17,19 +17,22 @@ li {
 /* Base styles */
 body {
     font-family: 'Oxygen Regular', Arial, sans-serif;
+    font-size: 36px;
 }
 .button {
-    background: none;
-    border: 2px solid #ccc;
-    padding: 10px 16px;
+    background: var(--primary);
+    padding: 30px;
     border-radius: 5px;
     display: inline-block;
     text-transform: uppercase;
     transition: .2s;
+    box-shadow: 0 7px 0 #b35500;
+    position: relative;
+    color: #fff;
 }
-.button:hover {
-    border: solid 2px var(--primary);
-    color: var(--primary);
+.button:active {
+    box-shadow: none;
+    top: 5px;
 }
 
 /* Font */
@@ -46,6 +49,22 @@ p, a, li {
 }
 
 /* Mobile styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.site-nav {
+    grid-column: span 3;
+    padding: 20px 0;
+}
+.site-nav h1 {
+    font-size: 3em;
+    color: var(--primary);
+    margin: 0 20px;
+}
+
 
 /* Tablet styles */
 @media screen and (min-width: 960px){

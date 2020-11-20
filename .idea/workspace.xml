@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7437c5c-9d93-43bb-8a64-b60904fde68c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../8209 Web Programming 1/Laboratory/week9 submitted" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -52,7 +53,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605407216054</updated>
-      <workItem from="1605407217441" duration="6916000" />
+      <workItem from="1605407217441" duration="7193000" />
+      <workItem from="1605560797610" duration="31000" />
+      <workItem from="1605836109382" duration="1214000" />
+      <workItem from="1605879871405" duration="7293000" />
     </task>
     <servers />
   </component>
@@ -64,5 +68,9 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1226" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605493170732" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1605560826817">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605560826817" />
   </component>
 </project>

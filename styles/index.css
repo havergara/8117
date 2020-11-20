@@ -1,0 +1,61 @@
+h2 {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.menu {
+    display: none;
+}
+
+#welcome-img {
+    display: none;
+}
+#welcome {
+    padding: 20px 40px 60px;
+    background-color: #007CBD;
+}
+#welcome-text {
+    grid-column: span 3;
+}
+#welcome-text p {
+    margin-bottom: 50px;
+    color: #fff;
+}
+#welcome-text h2 {
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+#about {
+    text-align: center;
+    padding: 20px 40px 60px;
+}
+#about h4 {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+#developers {
+    margin: 30px 0;
+    text-align: center;
+    background-color: #007CBD;
+    padding: 20px 40px 60px;
+}
+#developers div {
+    text-align: center;
+}
+#developers div img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: solid 1px #ccc;
+    background-color: #fff;
+}
+#developers h3 {
+    color: #fff;
+}
