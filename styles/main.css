@@ -25,7 +25,6 @@ body {
     border-radius: 5px;
     display: inline-block;
     text-transform: uppercase;
-    transition: .2s;
     box-shadow: 0 7px 0 #b35500;
     position: relative;
     color: #fff;
