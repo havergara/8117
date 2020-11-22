@@ -8,81 +8,22 @@ h3 {
     font-weight: bold;
 }
 
-.menu {
-    display: none;
-    position: relative;
-    grid-column: span 3;
-    list-style-type: none;
-    border-top: solid 1px #ccc;
-}
-.menu li:not(:last-child) {
-    border-bottom: 1px solid #666666;
-}
-
-.menu li a {
-    padding: 25px;
-    display: block;
-    color: #fff;
-    background-color: #4c4c4c;
-}
-.menu a:hover {
-    background-color: #666666;
-}
-#mobileNav img {
-    float: right;
-    width: 60px;
-    height: 60px;
-    margin: 45px 20px 0;
-}
-
 #welcome-img {
-    display: none;
+    grid-column: span 3;
+    text-align: center;
+    min-height: 300px;
 }
 #welcome {
     padding: 60px;
-    background-color: #007CBD;
 }
 #welcome-text {
     grid-column: span 3;
 }
 #welcome-text p {
     margin-bottom: 50px;
-    color: #fff;
+    color: var(--white);
 }
 #welcome-text h2 {
     margin-bottom: 50px;
-    color: #fff;
-}
-
-#about {
-    text-align: center;
-    padding: 60px;
-}
-#about h4 {
-    font-weight: bold;
-    color: var(--primary);
-}
-
-#developers {
-    margin: 30px 0;
-    text-align: center;
-    background-color: #007CBD;
-    padding: 60px;
-}
-#developers div {
-    text-align: center;
-}
-#developers div img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: solid 1px #ccc;
-    background-color: #fff;
-}
-#developers h3 {
-    color: #fff;
-}
-
-#developers p {
-    color: #fff;
+    color: var(--white);
 }

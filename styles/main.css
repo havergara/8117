@@ -2,6 +2,11 @@
 :root {
     --primary: #ED6B61;
     --secondary: #294282;
+
+    --blue: #007CBD;
+    --gray: #666666;
+    --darkGray: #4c4c4c;
+    --white: #fafafa;
 }
 
 /* Reset styles */
@@ -69,8 +74,8 @@ p, a, li {
     grid-column: span 3;
     padding: 20px 0 40px 0;
 }
-.site-nav h1 {
-    font-size: 3em;
+.site-nav h1 a {
+    font-size: 2em;
     color: var(--primary);
     margin: 0;
     padding: 0;
@@ -81,6 +86,39 @@ p, a, li {
 }
 .brand span {
     margin-top: -10px;
+}
+
+.menu {
+    display: none;
+    grid-column: span 3;
+    list-style-type: none;
+}
+.menu li:not(:last-child) {
+    border-bottom: 1px solid #666666;
+}
+
+.menu li a {
+    padding: 25px;
+    display: block;
+    color: #fff;
+    background-color: var(--darkGray);
+}
+.menu a:hover {
+    background-color: var(--gray);
+}
+.submenu li a{
+    padding-left: 60px;
+}
+
+.mobileNav img {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin: 45px 20px 0;
+}
+
+footer {
+    text-align: center;
 }
 
 
