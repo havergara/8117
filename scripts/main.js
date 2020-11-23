@@ -1,10 +1,10 @@
 $(function (){
 
-    $('.mobileNav').click(function (){
-        if($(this).next('.menu').is(":visible")){
-            $(this).next('.menu').slideUp('slow');
+    $('.mobileNav, .parentNav').on('click', function (){
+        if($(this).next('ul').is(":visible")){
+            $(this).next('ul').slideUp('slow');
         } else{
-            $(this).next('.menu').slideDown('slow');
+            $(this).next('ul').slideDown('slow');
         }
     });
 
