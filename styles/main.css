@@ -175,7 +175,7 @@ footer {
         grid-column: 2/13;
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: flex-end;
         margin: 0 20px;
     }
     .menu li:not(:last-child) {
