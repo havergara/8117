@@ -148,9 +148,6 @@ footer {
 
 /* Desktop/Laptop styles */
 @media screen and (min-width: 1024px){
-    .formlabel {
-        display: block;
-    }
     .grid {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -220,6 +217,32 @@ footer {
 
     .parentNav:hover .subNav {
         display: block;
+    }
+
+    .formLabel {
+        display: block;
+    }
+
+    .signup {
+        width: 600px;
+        margin: 50px auto;
+    }
+
+    .formContainer input, .formContainer textarea, .formContainer select {
+        font-size: 1em;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        color: var(--gray);
+        box-sizing: border-box;
+    }
+    .formContainer input[type='submit'] {
+        background-color: var(--primary);
+        padding: 15px;
+        color: #fafafa;
     }
 
 }
