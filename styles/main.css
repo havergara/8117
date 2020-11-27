@@ -125,7 +125,7 @@ footer {
     text-align: center;
 }
 
-input, textarea, select {
+.formContainer input, .formContainer textarea, .formContainer select {
     font-size: 1em;
     width: 100%;
     padding: 15px;
@@ -136,7 +136,7 @@ input, textarea, select {
     color: var(--gray);
     box-sizing: border-box;
 }
-input[type='submit'] {
+.formContainer input[type='submit'] {
     background-color: var(--primary);
     padding: 20px 15px;
 }
