@@ -1,0 +1,21 @@
+.discussion {
+    border: solid 1px;
+}
+.discussion:not(last-child) {
+    margin-bottom: 30px;
+}
+
+.discussionTitle {
+    font-weight: bold;
+    padding: 10px 5px;
+    background-color: var(--gray);
+}
+
+.discussionContent {
+    padding: 5px 10px;
+    display: none;
+}
+
+.topic {
+    text-align: justify;
+}
