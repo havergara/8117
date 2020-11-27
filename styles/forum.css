@@ -1,5 +1,5 @@
 .discussion {
-    border: solid 1px;
+    border: solid 1px var(--secondary);
 }
 .discussion:not(last-child) {
     margin-bottom: 30px;
@@ -8,14 +8,69 @@
 .discussionTitle {
     font-weight: bold;
     padding: 10px 5px;
-    background-color: var(--gray);
+    background-color: var(--secondary);
+    color: var(--white);
 }
 
 .discussionContent {
-    padding: 5px 10px;
-    display: none;
+    padding: 5px 0;
 }
 
-.topic {
+p {
     text-align: justify;
+}
+
+.forumTable {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border: solid 1px var(--secondary);
+}
+table tr td:not(last-child) {
+    padding-right: 20px;
+}
+table td:first-child{
+    padding-left: 20px;
+}
+table td:last-child{
+    padding-right: 20px;
+}
+table a {
+    color: var(--primary);
+}
+table td:not(:first-child), table th:not(:first-child) {
+    display: none;
+}
+th {
+    padding: 15px 0;
+    border-bottom: solid 1px;
+    background-color: var(--secondary);
+    color: var(--white);
+}
+th:first-child {
+    padding-left: 15px;
+    border-bottom: solid 1px;
+}
+td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: solid 1px var(--secondary);
+    border-bottom: solid 1px var(--secondary);
+}
+
+.tblColOne {
+    width: 70%;
+}
+
+.tblColOne a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+/* Desktop/Laptop styles */
+@media screen and (min-width: 1024px){
+    table td:not(:first-child), table th:not(:first-child) {
+        display: table-cell;
+    }
 }
