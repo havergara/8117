@@ -139,9 +139,10 @@ footer {
 .formContainer input[type='submit'] {
     background-color: var(--primary);
     padding: 30px 15px;
+    color: var(--white);
 }
 
-.formlabel {
+.formLabel {
     display: none;
 }
 
@@ -227,6 +228,9 @@ footer {
         width: 600px;
         margin: 50px auto;
     }
+    .signup hr {
+        margin-bottom: 30px;
+    }
 
     .formContainer input, .formContainer textarea, .formContainer select {
         font-size: 1em;
@@ -242,7 +246,7 @@ footer {
     .formContainer input[type='submit'] {
         background-color: var(--primary);
         padding: 15px;
-        color: #fafafa;
+        color: var(--white);
     }
 
 }
