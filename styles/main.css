@@ -147,6 +147,10 @@ footer {
     display: none;
 }
 
+#logoutLink {
+    display: none;
+}
+
 
 /* Desktop/Laptop styles */
 @media screen and (min-width: 1024px){
