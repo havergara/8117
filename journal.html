@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mind-full-ness - Journal</title>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mind-full-ness - Journal</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
 
-<nav class="site-nav grid">
-    <div class="brand">
-        <h1><a href="index.html">mindfullness</a></h1>
-        <span>keep your mind in mind</span>
-    </div>
-    <a class="mobileNav" href="#primary_nav"><img src="./images/res-menu.png" alt="nav icon"></a>
-    <ul class="menu">
-        <li>
-            <a href="#" class="mobileNav">My Account</a>
-            <ul class="menu submenu">
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="meditation.html">Meditation</a></li>
-                <li><a href="journal.html">Journal</a></li>
+        <nav class="site-nav grid">
+            <div class="brand">
+                <h1><a href="index.html">mindfullness</a></h1>
+                <span>keep your mind in mind</span>
+            </div>
+            <a id="navIcon" class="mobileNav" href="#"><img src="./images/res-menu.png" alt="nav icon"></a>
+            <ul class="menu">
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="parentNav">My Account</a>
+                        <ul class="menu subNav">
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="forum.html">Forum</a></li>
+                            <li><a href="meditation.html">Meditation</a></li>
+                            <li><a href="journal.html">Journal</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="logoutLink"><a href="#">Logout</a></li>
+                <li id="loginLink"><a href="login.html">Login</a></li>
+                <li id="signUpLink"><a href="signup.html">Sign Up</a></li>
             </ul>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-    </ul>
-</nav>
+        </nav>
 
-<section class="forum">
+        <main>
 
-    [Journal]
+            <section class="prompt">
 
-</section>
+                <h2>Today's Prompt</h2>
+                <p>Random Prompt</p>
 
-<footer>
-    [Footer]
-</footer>
+                <form action="">
+                    <div>
+                        <label>My Day</label>
+                        <input type="text" id="myDay" name="myDay">
+                    </div>
+                    <div>
+                        <label>Moods</label>
+                        <select name="myMood" id="myMood">
+                            <option value="1">Mood 1</option>
+                            <option value="2">Mood 2</option>
+                            <option value="3">Mood 3</option>
+                            <option value="4">Mood 4</option>
+                            <option value="5">Mood 5</option>
+                        </select>
+                    </div>
+                </form>
 
-<script src="scripts/libs/jquery.js"></script>
-<script src="scripts/main.js" type="text/javascript"></script>
-</body>
+            </section>
+
+        </main>
+
+        <footer>
+            [Footer]
+        </footer>
+
+        <script src="scripts/libs/jquery.js"></script>
+        <script src="scripts/main.js" type="text/javascript"></script>
+    </body>
 </html>
