@@ -38,21 +38,13 @@
 
     <section class="forum">
 
-        <table class="forumTable" id="forumTableTopics">
-            <tr>
-                <th>Topics</th>
-                <th class="notMobileColumn">Replies</th>
-                <th class="notMobileColumn">Views</th>
-                <th class="notMobileColumn">Last Post</th>
-            </tr>
-        </table>
+        <div id="topicContainer"></div>
 
-        <form id="forumTopicForm">
+        <form id="forumTopicResponseForm">
             <div class="formContainer">
-                <h2>Post new topic</h2>
-                <input type="text" id="topicTitle" name="topicTitle" placeholder="Topic Title">
-                <textarea name="topicContent" id="topicContent" cols="30" rows="5" placeholder="Topic content"></textarea>
-                <input type="submit" value="Create Topic" id="btnSubmit">
+                <label class="formLabel">Post reply</label>
+                <textarea name="topicReply" id="topicReply" cols="30" rows="5" placeholder="Reply"></textarea>
+                <input type="submit" value="Post Reply" id="btnSubmit">
             </div>
         </form>
 

@@ -94,6 +94,8 @@ function validatePassword(input_str){
         var passPassword = signupForm.password.value
         localStorage.setItem("userPass", passPassword)
 
+        var userFullName = signupForm.firstName.value + ' ' + signupForm.lastName.value;
+        localStorage.setItem("userFullName", userFullName);
 
        // alert(display)
     }
