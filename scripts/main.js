@@ -2,7 +2,7 @@ $(function (){
 
     $('.parentNav').on('click', function (){
 
-        if (sessionStorage.getItem("userToken") !== null) {
+        if (localStorage.getItem("userToken") !== null) {
             if($(this).next('ul').is(":visible")){
                 $(this).next('ul').slideUp('slow');
             } else{
@@ -21,7 +21,7 @@ $(function (){
         }
     });
 
-    if (sessionStorage.getItem("userToken") === null) {
+    if (localStorage.getItem("userToken") === null) {
         document.querySelector('.subNav').style.display = 'none';
     } else {
         document.querySelector('#loginLink').style.display = 'none';
@@ -31,7 +31,7 @@ $(function (){
     }
 
     logoutLink.firstChild.addEventListener('click', function () {
-        sessionStorage.clear();
+        localStorage.clear();
         window.location.href = 'index.html';
     });
 
