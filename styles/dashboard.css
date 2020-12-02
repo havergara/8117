@@ -1,0 +1,89 @@
+.introBG{
+    background-color: rgb(202, 192, 192);
+    background-size: cover;
+    height: 700px;
+}
+.centerfloater{
+    margin: auto;
+    text-align: center;
+    display: block;
+
+}
+.centerfloater1{
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 7em;
+    display: block;
+    width: 70px;
+
+}
+h2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+.collapsible {
+    background-color: rgba(66, 46, 53, 0.781);
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: rgb(196, 177, 177);
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.first{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+
+
+}
+.moodLog{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    /* background-color: rgb(255, 238, 217); */
+    grid-template-areas:
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . .";
+}
+.moodLog > div{
+    border: 1px solid rgb(5, 2, 32);
+    /* background-color: grey; */
+}
+.titles{
+    background-color: rgba(255, 214, 214, 0.76);
+}
+.leftfloater{
+    float: left;
+    text-align: left;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-size: 17px;
+
+
+}
