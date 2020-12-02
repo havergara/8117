@@ -1,46 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mind-full-ness - Forum</title>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mind-full-ness - Forum</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/forum.css">
+    </head>
+    <body>
 
-<nav class="site-nav grid">
-    <div class="brand">
-        <h1><a href="index.html">mindfullness</a></h1>
-        <span>keep your mind in mind</span>
-    </div>
-    <a class="mobileNav" href="#primary_nav"><img src="./images/res-menu.png" alt="nav icon"></a>
-    <ul class="menu">
-        <li>
-            <a href="#" class="mobileNav">My Account</a>
-            <ul class="menu submenu">
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="meditation.html">Meditation</a></li>
-                <li><a href="journal.html">Journal</a></li>
+        <nav class="site-nav grid">
+            <div class="brand">
+                <h1><a href="index.html">mindfullness</a></h1>
+                <span>keep your mind in mind</span>
+            </div>
+            <a id="navIcon" class="mobileNav" href="#"><img src="./images/res-menu.png" alt="nav icon"></a>
+            <ul class="menu">
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="parentNav">My Account</a>
+                        <ul class="menu subNav">
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="forum.html">Forum</a></li>
+                            <li><a href="meditation.html">Meditation</a></li>
+                            <li><a href="journal.html">Journal</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="logoutLink"><a href="#">Logout</a></li>
+                <li id="loginLink"><a href="login.html">Login</a></li>
+                <li id="signUpLink"><a href="signup.html">Sign Up</a></li>
             </ul>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-    </ul>
-</nav>
+        </nav>
 
-<section class="forum">
+        <main>
 
-    [Forum]
+            <section class="forum">
 
-</section>
+                <table class="forumTable">
+                    <tr>
+                        <th>General Discussions</th>
+                        <th class="notMobileColumn">Topics</th>
+                        <th class="notMobileColumn">Posts</th>
+                        <th class="notMobileColumn">Last Post</th>
+                    </tr>
+                    <tr>
+                        <td class="tblColOne">
+                            <a href="#"><b>Question & Answer</b></a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                        <td class="notMobileColumn">
+                            422
+                        </td>
+                        <td class="notMobileColumn">
+                            1366
+                        </td>
+                        <td>
+                            <a href="#">Re: Start the class standing</a><br>
+                            <small>
+                                by <i>Admin</i><br>
+                                Wed Nov 18, 2020 4:01 am
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tblColOne">
+                            <a href="#"><b>Upcoming Events</b></a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                        <td>
+                            422
+                        </td>
+                        <td>
+                            1366
+                        </td>
+                        <td>
+                            <a href="#">Re: Start the class standing</a><br>
+                            <small>
+                                by <i>Admin</i><br>
+                                Wed Nov 18, 2020 4:01 am
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tblColOne">
+                            <a href="#"><b>Negative Mood Issues</b></a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                        <td>
+                            422
+                        </td>
+                        <td>
+                            1366
+                        </td>
+                        <td>
+                            <a href="#">Re: Start the class standing</a><br>
+                            <small>
+                                by <i>Admin</i><br>
+                                Wed Nov 18, 2020 4:01 am
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tblColOne">
+                            <a href="#"><b>Video Comments</b></a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                        <td>
+                            422
+                        </td>
+                        <td>
+                            1366
+                        </td>
+                        <td>
+                            <a href="#">Re: Start the class standing</a><br>
+                            <small>
+                                by <i>Admin</i><br>
+                                Wed Nov 18, 2020 4:01 am
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tblColOne">
+                            <a href="#"><b>I Need Help!</b></a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </td>
+                        <td>
+                            422
+                        </td>
+                        <td>
+                            1366
+                        </td>
+                        <td>
+                            <a href="#">Re: Start the class standing</a><br>
+                            <small>
+                                by <i>Admin</i><br>
+                                Wed Nov 18, 2020 4:01 am
+                            </small>
+                        </td>
+                    </tr>
+                </table>
 
-<footer>
-    [Footer]
-</footer>
+            </section>
 
-<script src="scripts/libs/jquery.js"></script>
-<script src="scripts/main.js" type="text/javascript"></script>
-</body>
+        </main>
+
+        <footer>
+            [Footer]
+        </footer>
+
+        <script src="scripts/libs/jquery.js"></script>
+        <script src="scripts/main.js" type="text/javascript"></script>
+        <script src="scripts/forum.js" type="text/javascript"></script>
+    </body>
 </html>
