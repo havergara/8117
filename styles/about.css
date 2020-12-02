@@ -1,9 +1,12 @@
 #about {
     padding: 60px;
-    background-color: var(--blue);
+    /* background-color:var(--blue); */
+    background-color:var(--primary);
+
 }
 #about h4 {
     font-weight: bold;
+    color: rgb(252, 233, 215);
 }
 #about p:not(:last-child) {
     margin-bottom: 40px;
@@ -12,10 +15,13 @@
 #about h3{
     font-size: 1.7em;
     font-weight: bold;
+    color: var(--white);
 }
 #about p {
-    color: var(--white);
+    /* color: var(--white); */
+    color: var(--darkgrey);
     margin: 50px 0;
+    text:
 }
 
 #developers {
@@ -34,8 +40,20 @@
 }
 #developers h3 {
     margin-bottom: 70px;
+    color: var(--darkgrey);
+
+    
 }
 
 #developers p {
-    color: var(--white);
+    /* color: var(--white); */
+    color: var(--gray);
+
+}
+footer{
+        background-color: rgb(252, 233, 215);
+        text-align: left;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        font-size: 17px;
 }
