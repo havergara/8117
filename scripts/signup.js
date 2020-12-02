@@ -8,8 +8,13 @@ function validateEmail(input_str) {
     var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return re.test(input_str);
 }
+
+function validatePassword(input_str){
+    var re = /^[A-Za-z]\w{7,14}$/;
+    return re.test(input_str)
+}
  function validate(a) {
-    a.preventDefault();
+
 
     var valid = true;
 
@@ -34,6 +39,14 @@ function validateEmail(input_str) {
         signupForm.querySelector('#emailWarning').innerHTML = "*Please enter an Email*";
         valid = false;
     }
+
+    var password = signupForm.password.value
+    var passwordVerify = signupForm.verifyPassword.value
+    if ( password != passwordVerify || !validatePassword(password)){
+        signupForm.querySelector('#passwordWarning').innerHTML = "*Please enter Valid passwords, Passwords must Match*"
+        valid = false;
+    }
+
     var phone = signupForm.phone.value;
     if (!validatePhoneNumber(phone)){
         signupForm.querySelector('#phoneWarning').innerHTML = "*Please enter a Phone Number*";
@@ -76,11 +89,19 @@ function validateEmail(input_str) {
         alert("Submitted")
         var passEmail = signupForm.email.value
         localStorage.setItem("userEmail", passEmail)
-        var display = localStorage.getItem("userEmail")
+
+        //var display = localStorage.getItem("userEmail")
+        var passPassword = signupForm.password.value
+        localStorage.setItem("userPass", passPassword)
+
+
        // alert(display)
     }
     if (valid == false) {
         alert("Invalid")
+
+        a.preventDefault();
+
 
     }
     }
@@ -110,6 +131,18 @@ signupForm.email.addEventListener("change", function(){
         signupForm.querySelector('#emailWarning').innerHTML = "";
     }
 });
+
+signupForm.password.addEventListener("change", function(){
+    if (this.value != ""){
+        signupForm.querySelector('#passwordWarning').innerHTML = "";
+    }
+});
+signupForm.verifyPassword.addEventListener("change", function(){
+    if (this.value != ""){
+        signupForm.querySelector('#passwordWarning').innerHTML = "";
+    }
+});
+
 signupForm.phone.addEventListener("change", function(){
     if (this.value != ""){
         signupForm.querySelector('#phoneWarning').innerHTML = "";

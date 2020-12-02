@@ -45,48 +45,65 @@
                 <form id="signupForm" method="get">
                     <div class="formContainer">
                         <label for="firstName" class="formLabel">First Name</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="Enter First Name">
                         <span id="firstNameWarning" class="alert"></span>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter First Name">
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="lastName" class="formLabel">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
                         <span id="lastNameWarning" class="alert"></span>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
+                    
                     </div>
 
                     <div class="formContainer">
                         <label for="age" class="formLabel">Age</label>
-                        <input type="number" id="age" name="age" placeholder="Enter Age">
                         <span id="ageWarning" class="alert"></span>
+                        <input type="number" id="age" name="age" placeholder="Enter Age">
+                    
                     </div>
 
                     <div class="formContainer">
                         <label for="address" class="formLabel">Address</label>
-                        <textarea name="address" id="address" cols="30" rows="5" placeholder="Enter Address"></textarea>
                         <span id="addressWarning" class="alert"></span>
+                        <textarea name="address" id="address" cols="30" rows="5" placeholder="Enter Address"></textarea>
+                       
                     </div>
 
                     <div class="formContainer">
-                        <label for="email" class="formLabel">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Enter Email Address">
+
+                        <label for="email" class="formLabel">Email: This will be Your Username</label>
+
                         <span id="emailWarning" class="alert"></span>
+                        <input type="text" id="email" name="email" placeholder="Enter Email Address">
+                        
                     </div>
+                    <div class="formContainer">
+                        <label for="password" class="formLabel">Password: 8 to 16 Characters, #'s, _ only First character must be a letter</label>
+                        <span id="passwordWarning" class="alert"></span>
+                        <input type="password" id="password" name="password" placeholder="Enter a Password">
+                        <input type="password" id="verifyPassword" name="password2" placeholder="Verify Password">
+                    </div>
+
 
                     <div class="formContainer">
                         <label for="phone" class="formLabel">Phone Number</label>
-                        <input type="text" id="phone" name="phone" placeholder="Enter Phone Number">
                         <span id="phoneWarning" class="alert"></span>
+                        <input type="text" id="phone" name="phone" placeholder="Enter Phone Number">
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="occupation" class="formLabel">Occupation</label>
-                        <input type="text" id="occupation" name="occupation" placeholder="Enter Occupation">
                         <span id="occupationWarning" class="alert"></span>
+                        <input type="text" id="occupation" name="occupation" placeholder="Enter Occupation">
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="title" class="formLabel">Title</label>
+                        <span id="titleWarning" class="alert"></span>
                         <select name="title" id="title">
                             <option value="">Title</option>
                             <option value="1">Mrs</option>
@@ -94,11 +111,12 @@
                             <option value="3">Miss</option>
                             <option value="4">Mr</option>
                         </select>
-                        <span id="titleWarning" class="alert"></span>
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="status" class="formLabel">Relationship Status</label>
+                        <span id="statusWarning" class="alert"></span>
                         <select name="status" id="status">
                             <option value="">Relationship Status</option>
                             <option value="1">Married</option>
@@ -106,38 +124,41 @@
                             <option value="3">Single</option>
                             <option value="4">Engaged</option>
                         </select>
-                        <span id="statusWarning" class="alert"></span>
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="smoker" class="formLabel">Smoker</label>
+                        <span id="smokerWarning" class="alert"></span>
                         <select name="smoker" id="smoker">
                             <option value="">Smoker</option>
                             <option value="1">Yes</option>
                             <option value="0">No</option>
                         </select>
-                        <span id="smokerWarning" class="alert"></span>
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="therapist" class="formLabel">Seeing a Therapist?</label>
+                        <span id="therapistWarning" class="alert"></span>
                         <select name="therapist" id="therapist">
                             <option value="">Seeing a Therapist?</option>
                             <option value="1">Yes</option>
                             <option value="0">No</option>
                         </select>
-                        <span id="therapistWarning" class="alert"></span>
+                        
                     </div>
 
                     <div class="formContainer">
                         <label for="physicalActivity" class="formLabel">Physical Activity</label>
+                        <span id="physicalActivityWarning" class="alert"></span>
                         <select name="physicalActivity" id="physicalActivity">
                             <option value="">Physical Activity</option>
                             <option value="1">Once a week</option>
                             <option value="2">Twice a week</option>
                             <option value="3">Thrice a week</option>
                         </select>
-                        <span id="physicalActivityWarning" class="alert"></span>
+                        
                     </div>
 
                     <div class="formContainer">
