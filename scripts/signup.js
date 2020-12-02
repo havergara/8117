@@ -11,7 +11,7 @@ function validateEmail(input_str) {
 
 function validatePassword(input_str){
     var re = /^[A-Za-z]\w{7,14}$/;
-    return re.test(input_str)
+    return re.test(input_str);
 }
  function validate(a) {
 
@@ -86,21 +86,33 @@ function validatePassword(input_str){
         signupForm.querySelector('#physicalActivityWarning').innerHTML="*Please Select an Option*";
     }
     if (valid == true) {
-        alert("Submitted")
-        var passEmail = signupForm.email.value
-        localStorage.setItem("userEmail", passEmail)
+        alert("Submitted");
+        var passEmail = signupForm.email.value;
+        localStorage.setItem("userEmail", passEmail);
 
         //var display = localStorage.getItem("userEmail")
-        var passPassword = signupForm.password.value
-        localStorage.setItem("userPass", passPassword)
+        var passPassword = signupForm.password.value;
+        localStorage.setItem("userPass", passPassword);
 
         var userFullName = signupForm.firstName.value + ' ' + signupForm.lastName.value;
         localStorage.setItem("userFullName", userFullName);
-
+        var age = signupForm.age.value;
+        localStorage.setItem("age", age);
+        if(signupForm.smoker.options.selectedIndex === 1){
+           localStorage.setItem("smoker", "1")
+        }else{
+            localStorage.setItem("smoker", "0")
+        }
+        if (signupForm.status.options.selectedIndex === 1 || signupForm.status.options.selectedIndex === 4) {
+            localStorage.setItem("status", "1")
+        }else{ 
+            localStorage.setItem("status", "0")
+        }
+        
        // alert(display)
     }
     if (valid == false) {
-        alert("Invalid")
+        alert("Invalid");
 
         a.preventDefault();
 
