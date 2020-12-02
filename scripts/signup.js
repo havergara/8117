@@ -123,6 +123,16 @@ signupForm.email.addEventListener("change", function(){
         signupForm.querySelector('#emailWarning').innerHTML = "";
     }
 });
+signupForm.password.addEventListener("change", function(){
+    if (this.value != ""){
+        signupForm.querySelector('#passwordWarning').innerHTML = "";
+    }
+});
+signupForm.verifyPassword.addEventListener("change", function(){
+    if (this.value != ""){
+        signupForm.querySelector('#passwordWarning').innerHTML = "";
+    }
+});
 signupForm.phone.addEventListener("change", function(){
     if (this.value != ""){
         signupForm.querySelector('#phoneWarning').innerHTML = "";
