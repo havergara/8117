@@ -1,53 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mind-full-ness - Dashboard</title>
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Mind-full-ness - Dashboard</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <style>
+        .introBG{
+            background-color: rgb(202, 192, 192);
+            background-size: cover;
+            height: 700px;
+        }
+        .centerfloater{
+            margin: auto;
+            text-align: center;
+            display: block;
+            
+        }
+        .centerfloater1{
+            margin-left:auto;
+            margin-right: auto;
+            padding-top: 7em;
+            display: block;
+            width: 70px;
+            
+        }
+        h2{
+            padding-top: 1em;
+            padding-bottom: 1em;
+            text-align: center;
+        }
+        .collapsible {
+            background-color: rgba(66, 46, 53, 0.781);
+            color: rgb(230, 230, 230);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
 
-        <nav class="site-nav grid">
-            <div class="brand">
-                <h1><a href="index.html">mindfullness</a></h1>
-                <span>keep your mind in mind</span>
-            </div>
-            <a id="navIcon" class="mobileNav" href="#"><img src="./images/res-menu.png" alt="nav icon"></a>
-            <ul class="menu">
-                <li>
-                    <div class="dropdown">
-                        <a href="#" class="parentNav">My Account</a>
-                        <ul class="menu subNav">
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="forum.html?discussion=1">Forum</a></li>
-                            <li><a href="meditation.html">Meditation</a></li>
-                            <li><a href="journal.html">Journal</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="logoutLink"><a href="#">Logout</a></li>
-                <li id="loginLink"><a href="login.html">Login</a></li>
-                <li id="signUpLink"><a href="signup.html">Sign Up</a></li>
+        .active, .collapsible:hover {
+            background-color: rgb(196, 177, 177);
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .first{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+
+
+        }
+        .moodLog{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 2px;
+            /* background-color: rgb(255, 238, 217); */
+            grid-template-areas:
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . .";
+        }
+        .moodLog > div{
+            border: 1px solid rgb(5, 2, 32);
+            /* background-color: grey; */
+        }
+        .titles{
+            background-color: rgba(255, 214, 214, 0.76);
+        }
+        .leftfloater{
+            float: left;
+            text-align: left;
+            background-size: cover;
+            background-color: rgb(255, 255, 255);
+            padding-top: 2em;
+            padding-bottom: 1em;
+            font-size: 17px;
+
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+<nav class="site-nav grid">
+    <div class="brand">
+        <h1><a href="index.html">mindfullness</a></h1>
+        <span>keep your mind in mind</span>
+    </div>
+    <a class="mobileNav" href="#primary_nav"><img src="./images/res-menu.png" alt="nav icon"></a>
+    <ul class="menu">
+        <li>
+            <a href="#" class="mobileNav">My Account</a>
+            <ul class="menu submenu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="forum.html?discussion=1">Forum</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="journal.html">Journal</a></li>
+
             </ul>
-        </nav>
-        <main>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+</nav>
 
-            <section class="dashboard">
-                <h1>Summary</h1>
+<section class="dashboard">
+    <div class="introBG">
+        <img src="images/dbicon-iconscout.png" alt="icon" class="centerfloater1">
+        <h1 class="centerfloater">Dashboard</h1>
+    </div>
+    <h2>Weekly Mood Log</h2>
+    
+    <div class="chart">
+        <div class="moodLog">
+            <div class='time'>
+                
+                <div class="titles">
+                    Time
+                </div>
+            </div>
+            <div class="titles">
+                Mon
+            </div>
 
+            <div class="titles">
+                Tues
+            
+            </div>
+            <div class="titles">
+                Wed
+            </div>
+            <div class="titles">
+                Thurs
+            </div>
+            <div class="titles">
+                Fri
+            </div>
+            <div class="titles">
+                Sat
+            </div>
+            <div class="titles">
+                Sun
+            </div>
+            <div class="titles">
+                8-10AM
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="titles">   12-2PM
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="titles">
+                2-4PM
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="titles">
+                4-6PM
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="titles">
+                6-8PM
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div class="btn">
+            </div>
+            <div>
+            </div>
+            <div class="titles">
+                8-10PM
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div class="titles">
+                10-12PM
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            
 
+        </div>
+    </div>
+    <h2>Aggregated Progress</h2>
+    <button type="button" class="collapsible">Monday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                <img src="images/bargraph.png">
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Tuesday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                
+            </div>
+            <div>
 
-            </section>
+            </div>
+            <div>
+             
+            </div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Wednesday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Thursday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                
+            </div>
+            <div>
+                
 
-        </main>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Friday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                
+            </div>
+            <div>
+                
 
-        <footer>
-            [Footer]
-        </footer>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Saturday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                
+            </div>
+            <div>
+                
 
-        <script src="scripts/libs/jquery.js"></script>
-        <script src="scripts/main.js" type="text/javascript"></script>
-    </body>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Sunday</button>
+    <div class="content">
+        <div class="first">
+            <div>
+                
+            </div>
+            <div>
+                
+
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="leftfloater">
+        mindfulness</br>
+        Contact </br>
+        +411-523-5555 </br>
+        <a href="mailto:happymind@happylife.com">happymind@happylife.com</br></a>
+    </div>
+</footer>
+
+<script src="scripts/libs/jquery.js"></script>
+<script src="scripts/main.js" type="text/javascript"></script>
+<script src="scripts/dashboard.js"></script>
+
+</body>
+
 </html>
