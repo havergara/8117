@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="./styles/main.css">
     <style>
         .introBG{
-            background-color: rgb(202, 192, 192);
+            /* background-color: rgb(202, 192, 192); */
+            background-color: #ED6B61;
             background-size: cover;
             height: 700px;
         }
@@ -14,6 +15,7 @@
             margin: auto;
             text-align: center;
             display: block;
+            color: rgb(255, 255, 255);
             
         }
         .centerfloater1{
@@ -30,8 +32,14 @@
             text-align: center;
         }
         .collapsible {
-            background-color: rgba(66, 46, 53, 0.781);
-            color: rgb(230, 230, 230);
+            /* background-color: rgba(139, 129, 100, 0.781); */
+            /* background-color: #bbb7af; */
+            background-color: rgb(143, 122, 103);
+
+
+
+
+            color: rgb(255, 253, 253);
             cursor: pointer;
             padding: 18px;
             width: 100%;
@@ -56,15 +64,13 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: minmax(100px, auto);
-
-
         }
-        .moodLog{
+        /* .moodLog{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
             gap: 2px;
-            /* background-color: rgb(255, 238, 217); */
+            background-color: rgb(255, 238, 217);
             grid-template-areas:
                 ". . . . . . ."
                 ". . . . . . ."
@@ -75,24 +81,48 @@
                 ". . . . . . ."
                 ". . . . . . ."
                 ". . . . . . .";
-        }
-        .moodLog > div{
+        } */
+        /* .moodLog > div{
             border: 1px solid rgb(5, 2, 32);
-            /* background-color: grey; */
+            background-color: grey;
+        } */
+        /* .titles{
+            background-color: rgb(252, 233, 215);
+        } */
+
+        table, th, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            
         }
-        .titles{
-            background-color: rgba(255, 214, 214, 0.76);
+        table{
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .leftfloater{
-            float: left;
+        th{
+            background-color: rgb(252, 233, 215);
+
+        }
+        td{
+            height: 100px;
+        }
+
+        .joyful{
+            background-color: rgb(236, 199, 98);
+        }
+        .angry{ background-color: rgb(161, 49, 35);}
+        .disgusted{background-color: rgb(36, 148, 111);}
+        .nervous{background-color: violet;}
+        .average{background-color: wheat;}
+        .sad{background-color: rgb(63, 140, 190);}
+        
+        footer{
+            background-color: rgb(252, 233, 215);
             text-align: left;
-            background-size: cover;
-            background-color: rgb(255, 255, 255);
             padding-top: 2em;
-            padding-bottom: 1em;
+            padding-bottom: 2em;
             font-size: 17px;
-
-
         }
         
         
@@ -130,8 +160,114 @@
         <h1 class="centerfloater">Dashboard</h1>
     </div>
     <h2>Weekly Mood Log</h2>
+    <table>
+        <tr>
+            <th>
+                Time
+            </th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        <tr>
+            <th>8-10AM</th>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line2" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+
+        </tr>
+        <tr><th>10-12PM</th>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td></tr>
+        
+        <tr><th>12-2PM</th>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td></tr>
+        
+        <tr><th>2-4PM</th>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td></tr>
+        
+        <tr><th>4-6PM</th><td></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td></tr>
+        
+        <tr><th>6-8PM</th>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td></tr>
+        
+        <tr><th>8-10PM</th>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td></tr>
+        
+        <tr><th>10-12PM</th>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td></tr>
+        
+
+    </table>
     
-    <div class="chart">
+    <!-- <div class="chart">
         <div class="moodLog">
             <div class='time'>
                 
@@ -283,7 +419,7 @@
             
 
         </div>
-    </div>
+    </div> -->
     <h2>Aggregated Progress</h2>
     <button type="button" class="collapsible">Monday</button>
     <div class="content">
@@ -385,16 +521,15 @@
             </div>
         </div>
     </div>
+    
 
 </section>
 
 <footer>
-    <div class="leftfloater">
         mindfulness</br>
         Contact </br>
         +411-523-5555 </br>
         <a href="mailto:happymind@happylife.com">happymind@happylife.com</br></a>
-    </div>
 </footer>
 
 <script src="scripts/libs/jquery.js"></script>
