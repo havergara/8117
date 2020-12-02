@@ -12,3 +12,17 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// function clickable(i){
+//   if (document.getElementById("moodsL").value == "Joyful"){
+
+//   }
+// }
+
+document.querySelector('select').onchange=clickable;
+var line1 = document.getElementById("line1");
+function clickable(event){
+  line1.classList = this.value;
+}
+
+

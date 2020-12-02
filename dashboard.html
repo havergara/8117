@@ -40,8 +40,114 @@
         <h1 class="centerfloater">Dashboard</h1>
     </div>
     <h2>Weekly Mood Log</h2>
+    <table>
+        <tr>
+            <th>
+                Time
+            </th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        <tr>
+            <th>8-10AM</th>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line2" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable"></td>
+
+        </tr>
+        <tr><th>10-12PM</th>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td>
+            <td id="line2" class="clickable"></td></tr>
+        
+        <tr><th>12-2PM</th>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td>
+            <td id="line3" class="clickable"></td></tr>
+        
+        <tr><th>2-4PM</th>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td>
+            <td  id="line4" class="clickable"></td></tr>
+        
+        <tr><th>4-6PM</th><td></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td>
+            <td id="line5" class="clickable"></td></tr>
+        
+        <tr><th>6-8PM</th>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td>
+            <td id="line6" class="clickable"></td></tr>
+        
+        <tr><th>8-10PM</th>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td>
+            <td id="line7" class="clickable"></td></tr>
+        
+        <tr><th>10-12PM</th>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td>
+            <td id="line8" class="clickable"></td></tr>
+        
+
+    </table>
     
-    <div class="chart">
+    <!-- <div class="chart">
         <div class="moodLog">
             <div class='time'>
                 
@@ -193,7 +299,7 @@
             
 
         </div>
-    </div>
+    </div> -->
     <h2>Aggregated Progress</h2>
     <button type="button" class="collapsible">Monday</button>
     <div class="content">
@@ -295,16 +401,15 @@
             </div>
         </div>
     </div>
+    
 
 </section>
 
 <footer>
-    <div class="leftfloater">
         mindfulness</br>
         Contact </br>
         +411-523-5555 </br>
         <a href="mailto:happymind@happylife.com">happymind@happylife.com</br></a>
-    </div>
 </footer>
 
 <script src="scripts/libs/jquery.js"></script>
