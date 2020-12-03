@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Mind-full-ness - Journal</title>
         <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/journal.css">
     </head>
     <body>
 
@@ -37,24 +38,20 @@
 
             <section class="prompt">
 
-                <h2>Journal Prompt</h2>
                 <button id = "prompt">Get Different Prompt</button>
-                <span id="randomPrompt">What About your day was exciting?</span>
-               
-                <form action="get">
-                    <div>
-            
-                        <textarea name="myday" id="myday" cols="30" rows="5" ></textarea>
+                <h2 id="randomPrompt">What About your day was exciting?</h2>
+
+                <form id="loginForm" method="get">
+                    <div class="formContainer">
+                        <span id="addressWarning" class="alert"></span>
+                        <textarea name="myday" id="myday" rows="5"></textarea>
                     </div>
-                    <div>
-                       <button id="save">Save</button><button id="load">Load</button>
-                       <!--  <select name="myMood" id="myMood">
-                            <option value="1">Content</option>
-                            <option value="2">Happy</option>
-                            <option value="3">Excited</option>
-                            <option value="4">Steady</option>
-                            <option value="5">Irritable</option>
-                        </select> -->
+                    <div class="alert" id="accountAlert"></div>
+                    <div class="formContainer">
+                        <div class="btnGroup">
+                            <input type="submit" id="save" value="Save">
+                            <input type="submit" id="load" value="Load">
+                        </div>
                     </div>
                 </form>
 
