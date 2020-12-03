@@ -4,7 +4,108 @@
     <meta charset="UTF-8">
     <title>Mind-full-ness - Dashboard</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/dashboard.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .introBG{
+            background-color: #ED6B61;
+            background-size: cover;
+            height: 700px;
+        }
+        .centerfloater{
+            margin: auto;
+            text-align: center;
+            display: block;
+            color: rgb(255, 255, 255);
+            
+        }
+        .centerfloater1{
+            margin-left:auto;
+            margin-right: auto;
+            padding-top: 7em;
+            display: block;
+            width: 70px;
+            
+        }
+        h2{
+            padding-top: 1em;
+            padding-bottom: 1em;
+            text-align: center;
+        }
+        .collapsible {
+            background-color: var(--secondary);
+            color: rgb(255, 253, 253);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: rgb(196, 177, 177);
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .first{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .img{
+            height:300px;
+        }
+        /* .moodLog{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 2px;
+            background-color: rgb(255, 238, 217);
+            grid-template-areas:
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . ."
+                ". . . . . . .";
+        } */
+        /* .moodLog > div{
+            border: 1px solid rgb(5, 2, 32);
+            background-color: grey;
+        } */
+        /* .titles{
+            background-color: rgb(252, 233, 215);
+        } */
+
+        table, th, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th{
+            background-color: rgb(252, 233, 215);
+
+        }
+        td{
+            height: 100px;
+        }        
+        
+    </style>
 </head>
 <body>
 
@@ -53,10 +154,11 @@
             <th>Saturday</th>
             <th>Sunday</th>
         </tr>
-        <tr>
-            <th>8-10AM</th>
+        <tr class="subparent">
+            <th>8-6PM</th>
             <td id="line1" class="clickable">
                 <select name="moods" id="moodsL">
+                    <option>Select</option>
                     <option value="joyful" class="yellow">Joyful</option>
                     <option value="sad" class="blue">Sad</option>
                     <option value="average" class="beige">Average</option>
@@ -65,8 +167,9 @@
                     <option value="angry" class="red">Angry</option>
                 </select>
             </td>
-            <td id="line2" class="clickable">
+            <td id="line1" class="clickable">
                 <select name="moods" id="moodsL">
+                    <option>Select</option>
                     <option value="joyful" class="yellow">Joyful</option>
                     <option value="sad" class="blue">Sad</option>
                     <option value="average" class="beige">Average</option>
@@ -75,76 +178,142 @@
                     <option value="angry" class="red">Angry</option>
                 </select>
             </td>
-            <td id="line1" class="clickable"></td>
-            <td id="line1" class="clickable"></td>
-            <td id="line1" class="clickable"></td>
-            <td id="line1" class="clickable"></td>
-            <td id="line1" class="clickable"></td>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line1" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
 
         </tr>
-        <tr><th>10-12PM</th>
-            <td id="line2" class="clickable"></td>
-            <td id="line2" class="clickable"></td>
-            <td id="line2" class="clickable"></td>
-            <td id="line2" class="clickable"></td>
-            <td id="line2" class="clickable"></td>
-            <td id="line2" class="clickable"></td>
-            <td id="line2" class="clickable"></td></tr>
         
-        <tr><th>12-2PM</th>
-            <td id="line3" class="clickable"></td>
-            <td id="line3" class="clickable"></td>
-            <td id="line3" class="clickable"></td>
-            <td id="line3" class="clickable"></td>
-            <td id="line3" class="clickable"></td>
-            <td id="line3" class="clickable"></td>
-            <td id="line3" class="clickable"></td></tr>
-        
-        <tr><th>2-4PM</th>
-            <td  id="line4" class="clickable"></td>
-            <td  id="line4" class="clickable"></td>
-            <td  id="line4" class="clickable"></td>
-            <td  id="line4" class="clickable"></td>
-            <td  id="line4" class="clickable"></td>
-            <td  id="line4" class="clickable"></td>
-            <td  id="line4" class="clickable"></td></tr>
-        
-        <tr><th>4-6PM</th><td></td>
-            <td id="line5" class="clickable"></td>
-            <td id="line5" class="clickable"></td>
-            <td id="line5" class="clickable"></td>
-            <td id="line5" class="clickable"></td>
-            <td id="line5" class="clickable"></td>
-            <td id="line5" class="clickable"></td></tr>
-        
-        <tr><th>6-8PM</th>
-            <td id="line6" class="clickable"></td>
-            <td id="line6" class="clickable"></td>
-            <td id="line6" class="clickable"></td>
-            <td id="line6" class="clickable"></td>
-            <td id="line6" class="clickable"></td>
-            <td id="line6" class="clickable"></td>
-            <td id="line6" class="clickable"></td></tr>
-        
-        <tr><th>8-10PM</th>
-            <td id="line7" class="clickable"></td>
-            <td id="line7" class="clickable"></td>
-            <td id="line7" class="clickable"></td>
-            <td id="line7" class="clickable"></td>
-            <td id="line7" class="clickable"></td>
-            <td id="line7" class="clickable"></td>
-            <td id="line7" class="clickable"></td></tr>
-        
-        <tr><th>10-12PM</th>
-            <td id="line8" class="clickable"></td>
-            <td id="line8" class="clickable"></td>
-            <td id="line8" class="clickable"></td>
-            <td id="line8" class="clickable"></td>
-            <td id="line8" class="clickable"></td>
-            <td id="line8" class="clickable"></td>
-            <td id="line8" class="clickable"></td></tr>
-        
-
+        <tr class="subparent"><th>6-12AM</th>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td>
+            <td id="line3" class="clickable">
+                <select name="moods" id="moodsL">
+                    <option>Select</option>
+                    <option value="joyful" class="yellow">Joyful</option>
+                    <option value="sad" class="blue">Sad</option>
+                    <option value="average" class="beige">Average</option>
+                    <option value="disgusted" class="green">Disgusted</option>
+                    <option value="nervous" class="purple">Nervous</option>
+                    <option value="angry" class="red">Angry</option>
+                </select>
+            </td></tr>
     </table>
     
     <!-- <div class="chart">
@@ -321,11 +490,7 @@
     <div class="content">
         <div class="first">
             <div>
-                <img src="images/bargraph.png">
-            </div>
-            <div>
-            </div>
-            <div>
+                <img src="images/bargraph.png" alt="chart" class="img">
             </div>
         </div>
     </div>
@@ -333,13 +498,8 @@
     <div class="content">
         <div class="first">
             <div>
-                
-            </div>
-            <div>
+                <img src="images/bargraph.png" alt="chart" class="img">
 
-            </div>
-            <div>
-             
             </div>
         </div>
     </div>
@@ -347,28 +507,18 @@
     <div class="content">
         <div class="first">
             <div>
-                
+                <img src="images/bargraph.png" alt="chart" class="img">
+
             </div>
-            <div>
-                
-            </div>
-            <div>
-                
-            </div>
+            
         </div>
     </div>
     <button type="button" class="collapsible">Thursday</button>
     <div class="content">
         <div class="first">
             <div>
-                
-            </div>
-            <div>
-                
+                <img src="images/bargraph.png" alt="chart" class="img">
 
-            </div>
-            <div>
-                
             </div>
         </div>
     </div>
@@ -376,44 +526,28 @@
     <div class="content">
         <div class="first">
             <div>
-                
-            </div>
-            <div>
-                
+                <img src="images/bargraph.png" alt="chart" class="img">
 
             </div>
-            <div>
-                
-            </div>
+            
         </div>
     </div>
     <button type="button" class="collapsible">Saturday</button>
     <div class="content">
         <div class="first">
             <div>
-                
-            </div>
-            <div>
-                
+                <img src="images/bargraph.png" alt="chart" class="img">
 
             </div>
-            <div>
-                
-            </div>
+        
         </div>
     </div>
     <button type="button" class="collapsible">Sunday</button>
     <div class="content">
         <div class="first">
             <div>
-                
-            </div>
-            <div>
-                
+                <img src="images/bargraph.png" alt="chart" class="img">
 
-            </div>
-            <div>
-                
             </div>
         </div>
     </div>
