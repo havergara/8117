@@ -18,3 +18,9 @@ document.getElementById('load').addEventListener("click", function(){
     var load = localStorage.getItem("myday");
     document.getElementById("myday").innerHTML = load;
 });
+
+// Redirect user to login page if user is not logged in
+if (localStorage.getItem("userToken") === null) {
+    window.location.href = 'login.html';
+}
+// END - Redirect user to login page if user is not logged in
