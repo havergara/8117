@@ -150,6 +150,7 @@ footer {
     background-color: var(--primary);
     padding: 30px 15px;
     color: var(--white);
+    cursor: pointer;
 }
 
 .formLabel {
@@ -243,7 +244,7 @@ footer {
         display: block;
     }
 
-    .signup, .login {
+    .signup, .login, .prompt {
         width: 600px;
         margin: 50px auto;
     }
@@ -266,6 +267,14 @@ footer {
         background-color: var(--primary);
         padding: 15px;
         color: var(--white);
+    }
+
+    .btnGroup {
+        display: flex;
+        justify-content: space-around;
+    }
+    .btnGroup input[type="submit"] {
+        margin: 5px;
     }
 }
 
