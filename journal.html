@@ -37,23 +37,24 @@
 
             <section class="prompt">
 
-                <h2>Today's Prompt</h2>
-                <p>Random Prompt</p>
-
-                <form action="">
+                <h2>Journal Prompt</h2>
+                <button id = "prompt">Get Different Prompt</button>
+                <span id="randomPrompt">What About your day was exciting?</span>
+               
+                <form action="get">
                     <div>
-                        <label>My Day</label>
-                        <input type="text" id="myDay" name="myDay">
+            
+                        <textarea name="myday" id="myday" cols="30" rows="5" ></textarea>
                     </div>
                     <div>
-                        <label>Moods</label>
-                        <select name="myMood" id="myMood">
-                            <option value="1">Mood 1</option>
-                            <option value="2">Mood 2</option>
-                            <option value="3">Mood 3</option>
-                            <option value="4">Mood 4</option>
-                            <option value="5">Mood 5</option>
-                        </select>
+                       <button id="save">Save</button><button id="load">Load</button>
+                       <!--  <select name="myMood" id="myMood">
+                            <option value="1">Content</option>
+                            <option value="2">Happy</option>
+                            <option value="3">Excited</option>
+                            <option value="4">Steady</option>
+                            <option value="5">Irritable</option>
+                        </select> -->
                     </div>
                 </form>
 
@@ -67,5 +68,6 @@
 
         <script src="scripts/libs/jquery.js"></script>
         <script src="scripts/main.js" type="text/javascript"></script>
+        <script src="scripts/journal.js" type="text/javascript"></script>
     </body>
 </html>
