@@ -70,6 +70,12 @@ function loadResponses(topicResponses) {
 
 $(function(){
 
+    // Redirect user to login page if user is not logged in
+    if (localStorage.getItem("userToken") === null) {
+        window.location.href = 'login.html';
+    }
+    // END - Redirect user to login page if user is not logged in
+
     if (localStorage.getItem("forumJson") === null){
         localStorage.setItem('forumJson', JSON.stringify(myJSONForum));
     }

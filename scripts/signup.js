@@ -13,10 +13,9 @@ function validatePassword(input_str){
     var re = /^[A-Za-z]\w{7,14}$/;
     return re.test(input_str);
 }
- function validate(a) {
-
-
+function validate(a) {
     var valid = true;
+    let myAlert = "Invalid! ";
 
     if (signupForm.firstName.value === "") {
         signupForm.querySelector('#firstNameWarning').innerHTML = "*Please enter a First Name*";
@@ -42,7 +41,7 @@ function validatePassword(input_str){
 
     var password = signupForm.password.value
     var passwordVerify = signupForm.verifyPassword.value
-    if ( password != passwordVerify || !validatePassword(password)){
+    if ( password !== passwordVerify || !validatePassword(password)){
         signupForm.querySelector('#passwordWarning').innerHTML = "*Please enter Valid passwords, Passwords must Match*"
         valid = false;
     }
@@ -85,8 +84,40 @@ function validatePassword(input_str){
         valid = false;
         signupForm.querySelector('#physicalActivityWarning').innerHTML="*Please Select an Option*";
     }
-    if (valid == true) {
-        alert("Submitted");
+    if (valid === true) {
+        let accounts = [];
+        let userDetails = { fname:"", lname:"", age:"", address:"", email:"", pw:"", phone:"", occupation:"", title:"", status:"", smoker:"", therapist:"", activity:"" };
+
+        userDetails.fname = signupForm.firstName.value;
+        userDetails.lname = signupForm.lastName.value;
+        userDetails.age = signupForm.age.value;
+        userDetails.address = signupForm.address.value;
+        userDetails.email = signupForm.email.value;
+        userDetails.pw = signupForm.password.value;
+        userDetails.phone = signupForm.phone.value;
+        userDetails.occupation = signupForm.occupation.value;
+        userDetails.title = signupForm.title.value;
+        userDetails.status = signupForm.status.value;
+        userDetails.smoker = signupForm.smoker.value;
+        userDetails.therapist = signupForm.therapist.value;
+        userDetails.activity = signupForm.physicalActivity.value;
+
+        if (localStorage.getItem('accounts') === null){
+            accounts.push(userDetails);
+            localStorage.setItem('accounts', JSON.stringify(accounts));
+        } else {
+            let myAccounts = JSON.parse(localStorage.getItem('accounts'));
+            let checkAcc = myAccounts.find(myAcc => myAcc.email === userDetails.email);
+
+            if (typeof checkAcc !== 'undefined') {
+                myAlert = myAlert + 'Email already exist!';
+                valid = false;
+            }
+
+            myAccounts.push(userDetails);
+            localStorage.setItem('accounts', JSON.stringify(myAccounts));
+        }
+
         var passEmail = signupForm.email.value;
         localStorage.setItem("userEmail", passEmail);
 
@@ -96,13 +127,16 @@ function validatePassword(input_str){
 
         var userFullName = signupForm.firstName.value + ' ' + signupForm.lastName.value;
         localStorage.setItem("userFullName", userFullName);
+
         var age = signupForm.age.value;
         localStorage.setItem("age", age);
+
         if(signupForm.smoker.options.selectedIndex === 1){
            localStorage.setItem("smoker", "1")
         }else{
             localStorage.setItem("smoker", "0")
         }
+
         if (signupForm.status.options.selectedIndex === 1 || signupForm.status.options.selectedIndex === 4) {
             localStorage.setItem("status", "1")
         }else{ 
@@ -111,14 +145,15 @@ function validatePassword(input_str){
         
        // alert(display)
     }
-    if (valid == false) {
-        alert("Invalid");
 
+    if (valid === false) {
+        alert(myAlert);
         a.preventDefault();
 
-
+    } else {
+        alert("Submitted");
     }
-    }
+}
 
 signupForm.firstName.addEventListener("change", function(){
     if (this.value != ""){

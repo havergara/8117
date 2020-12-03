@@ -9,6 +9,7 @@
     --white: #fafafa;
 
     --responseBgColor: #E1EBF2;
+    --alert: #ff4538;
 }
 
 /* Reset styles */
@@ -157,6 +158,12 @@ footer {
 
 #logoutLink {
     display: none;
+}
+
+.alert {
+    float: right;
+    color: darkred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
