@@ -273,8 +273,11 @@ footer {
         display: flex;
         justify-content: space-around;
     }
-    .btnGroup input[type="submit"] {
-        margin: 5px;
+    .btnGroup input[type="submit"]:not(:last-child) {
+        margin-right: 5px;
+    }
+    .btnGroup input[type="submit"]:not(:first-child) {
+        margin-left: 5px;
     }
 }
 
