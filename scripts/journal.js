@@ -8,6 +8,7 @@ document.getElementById("prompt").addEventListener("click", function(){
     if (x >= newPrompt.length){
         x = 0
     }
+    myday.value = '';
 });
 
 document.getElementById('save').addEventListener("click", function(){
