@@ -87,3 +87,9 @@ h2{
 
 
 }
+.acc {
+    display:flex;
+}
+.accT {
+    padding: 50px,0;
+}

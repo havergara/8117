@@ -9,6 +9,7 @@
     --white: #fafafa;
 
     --responseBgColor: #E1EBF2;
+    --alert: #ff4538;
 }
 
 /* Reset styles */
@@ -149,6 +150,12 @@ footer {
     background-color: var(--primary);
     padding: 30px 15px;
     color: var(--white);
+    cursor: pointer;
+}
+.formContainer input[type='button'], .formContainer input[type='reset'] {
+    background-color: var(--primary);
+    color: var(--white);
+    cursor: pointer;
 }
 
 .formLabel {
@@ -157,6 +164,12 @@ footer {
 
 #logoutLink {
     display: none;
+}
+
+.alert {
+    float: right;
+    color: darkred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -236,7 +249,7 @@ footer {
         display: block;
     }
 
-    .signup, .login {
+    .signup, .login, .prompt, .contact {
         width: 600px;
         margin: 50px auto;
     }
@@ -259,6 +272,17 @@ footer {
         background-color: var(--primary);
         padding: 15px;
         color: var(--white);
+    }
+
+    .btnGroup {
+        display: flex;
+        justify-content: space-around;
+    }
+    .btnGroup input[type="submit"]:not(:last-child) {
+        margin-right: 5px;
+    }
+    .btnGroup input[type="submit"]:not(:first-child) {
+        margin-left: 5px;
     }
 }
 

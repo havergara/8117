@@ -1,0 +1,14 @@
+#randomPrompt {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#prompt {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#prompt {
+    font-size: 1em;
+}
