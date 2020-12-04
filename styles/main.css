@@ -66,6 +66,35 @@ p, a, li {
     color: #626262;
 }
 
+.divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background-color: var(--secondary); */
+    height: 45em;
+    text-align: center;
+    /* width: 80%;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.divider img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.divider > h3{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: rgb(70, 77, 70);
+    /* padding-top: 60px; */
+}
+
 /* Mobile styles */
 .grid {
     display: grid;
@@ -125,14 +154,55 @@ main {
 }
 
 footer {
-    background-color: rgb(252, 233, 215);
+    background-color: rgb(238, 238, 238);
+    /* background-color: rgb(252, 233, 215); */
     text-align: left;
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 10px;
     font-size: 17px;
-    color: var(--darkGray)
+    color: rgb(122, 114, 108);
+    /* color: rgb(155, 127, 101); */
+
 }
+a{
+    color: var(--primary);
+}
+.infoFooter{
+    padding: 10px 0 0 18px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-instagram{
+      background: var(--primary);
+      color: white;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  p > a{
+      float:right;
+      
+  }
 
 .formContainer input, .formContainer textarea, .formContainer select {
     font-size: 1em;
