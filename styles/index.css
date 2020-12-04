@@ -6,15 +6,31 @@ h2 {
 h3 {
     font-size: 1.7em;
     font-weight: bold;
+    font-family: 'didot';
+    padding-left: 30px;
+    color: rgb(70,77,70);
+    text-align: left;
+    padding-top: 30px;
+}
+p{
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 50px;
+
 }
 
-#welcome-img {
-    grid-column: span 3;
-    text-align: center;
-    min-height: 300px;
+#about > img{
+    height: 80px;
+    padding-left: 50px;
 }
+
+/* #welcome-img {
+    grid-column: span 3;
+    min-height: 500px;
+    
+}  */
 #welcome {
-    padding: 60px;
+    padding: 20px;
 }
 #welcome-text {
     grid-column: span 3;
