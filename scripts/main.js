@@ -227,8 +227,9 @@ $(function (){
     }
 
     logoutLink.firstChild.addEventListener('click', function () {
-        localStorage.clear();
+        localStorage.removeItem("userToken");
+        localStorage.removeItem("userDetails");
         window.location.href = 'index.html';
     });
 
-})
+});

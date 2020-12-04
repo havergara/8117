@@ -86,3 +86,9 @@ if (status === "1"){
 }else{
   document.getElementById("status").innerHTML = noPartner;
 }
+
+// Redirect user to login page if user is not logged in
+if (localStorage.getItem("userToken") === null) {
+    window.location.href = 'login.html';
+}
+// END - Redirect user to login page if user is not logged in

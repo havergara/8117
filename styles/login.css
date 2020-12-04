@@ -1,0 +1,7 @@
+#accountAlert {
+    background-color: var(--alert);
+    color: #000;
+    float: none;
+    padding: 15px;
+    display: none;
+}
