@@ -33,11 +33,41 @@
             </ul>
         </nav>
 
-        <section class="forum">
+        <main>
 
-            [Contact]
+            <section class="contact">
 
-        </section>
+                <h2>Contact Us</h2>
+                <hr>
+
+                <form id="contactForm" method="get" action="mailto:contact@mindfullness.com" enctype="text/plain">
+                    <input type="hidden" name="subject" value="Inquiry from website" readonly>
+                    <div class="formContainer">
+                        <label for="myName" class="formLabel">Name</label>
+                        <span id="myNameWarning" class="alert"></span>
+                        <input type="text" name="myName" id="myName" placeholder="Name">
+                    </div>
+                    <div class="formContainer">
+                        <label for="email" class="formLabel">Email</label>
+                        <span id="emailWarning" class="alert"></span>
+                        <input type="text" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="formContainer">
+                        <label for="body" class="formLabel">Message</label>
+                        <span id="messageWarning" class="alert"></span>
+                        <textarea name="body" id="body" rows="5" placeholder="Message"></textarea>
+                    </div>
+                    <div class="formContainer">
+                        <div class="btnGroup">
+                            <input type="submit" id="save" value="Send">
+                            <input type="reset" id="load" value="Reset">
+                        </div>
+                    </div>
+                </form>
+
+            </section>
+
+        </main>
 
         <footer>
             [Footer]

@@ -152,7 +152,7 @@ footer {
     color: var(--white);
     cursor: pointer;
 }
-.formContainer input[type='button'] {
+.formContainer input[type='button'], .formContainer input[type='reset'] {
     background-color: var(--primary);
     color: var(--white);
     cursor: pointer;
@@ -249,7 +249,7 @@ footer {
         display: block;
     }
 
-    .signup, .login, .prompt {
+    .signup, .login, .prompt, .contact {
         width: 600px;
         margin: 50px auto;
     }
