@@ -14,7 +14,7 @@ function validateLogin(event) {
 
 
     if (validForm) {
-        sessionStorage.setItem('userToken', email.substring(0, email.lastIndexOf("@")) + Math.floor(Math.random()));
+        localStorage.setItem('userToken', email.substring(0, email.lastIndexOf("@")) + Math.floor(Math.random()));
     }
 
     return validForm;

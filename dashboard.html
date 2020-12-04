@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Mind-full-ness - Dashboard</title>
     <link rel="stylesheet" href="./styles/main.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         .introBG{
@@ -114,21 +114,24 @@
         <h1><a href="index.html">mindfullness</a></h1>
         <span>keep your mind in mind</span>
     </div>
-    <a class="mobileNav" href="#primary_nav"><img src="./images/res-menu.png" alt="nav icon"></a>
+    <a id="navIcon" class="mobileNav" href="#"><img src="./images/res-menu.png" alt="nav icon"></a>
     <ul class="menu">
         <li>
-            <a href="#" class="mobileNav">My Account</a>
-            <ul class="menu submenu">
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="meditation.html">Meditation</a></li>
-                <li><a href="journal.html">Journal</a></li>
-            </ul>
+            <div class="dropdown">
+                <a href="#" class="parentNav">My Account</a>
+                <ul class="menu subNav">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="forum.html?discussion=1">Forum</a></li>
+                    <li><a href="meditation.html">Meditation</a></li>
+                    <li><a href="journal.html">Journal</a></li>
+                </ul>
+            </div>
         </li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
+        <li id="logoutLink"><a href="#">Logout</a></li>
+        <li id="loginLink"><a href="login.html">Login</a></li>
+        <li id="signUpLink"><a href="signup.html">Sign Up</a></li>
     </ul>
 </nav>
 
@@ -466,6 +469,22 @@
 
         </div>
     </div> -->
+    <div>
+        <h1>Account Details</h1>
+        
+        <span id="name"></span>
+        <br><br>
+        <span id="age"></span>
+        <br><br>
+        <span id="email"></span>
+        <br>
+        <hr>
+        <h1>Tips for you</h1>
+        <br>
+        <span id="smoker"></span>
+        <br><br>
+        <span id="status"></span>
+    </div>
     <h2>Aggregated Progress</h2>
     <button type="button" class="collapsible">Monday</button>
     <div class="content">

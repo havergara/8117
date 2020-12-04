@@ -20,7 +20,7 @@ p {
     text-align: justify;
 }
 
-.forumTable {
+.forumTable{
     width: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -68,9 +68,32 @@ td {
     color: var(--secondary);
 }
 
+.responseContainer {
+    padding: 20px;
+    border: solid 1px var(--secondary);
+    background-color: var(--responseBgColor);
+}
+
+.responseContainer:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.responseContainer .creatorMeta {
+    margin-bottom: 10px;
+}
+
 /* Desktop/Laptop styles */
 @media screen and (min-width: 1024px){
     table td:not(:first-child), table th:not(:first-child) {
         display: table-cell;
+    }
+
+    #forumTopicForm div, #forumTopicResponseForm div {
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    #forumTopicForm div>textarea {
+        width: 100%;
     }
 }
