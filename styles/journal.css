@@ -8,3 +8,7 @@
     border: none;
     cursor: pointer;
 }
+
+#prompt {
+    font-size: 1em;
+}

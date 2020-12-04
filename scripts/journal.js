@@ -18,7 +18,8 @@ document.getElementById('save').addEventListener("click", function(){
 
 document.getElementById('load').addEventListener("click", function(){
     var load = localStorage.getItem("myday");
-    document.getElementById("myday").innerHTML = load;
+    //document.getElementById("myday").innerHTML = load;
+    document.getElementById("myday").value = load;
 });
 
 // Redirect user to login page if user is not logged in

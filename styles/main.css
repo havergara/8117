@@ -152,6 +152,11 @@ footer {
     color: var(--white);
     cursor: pointer;
 }
+.formContainer input[type='button'] {
+    background-color: var(--primary);
+    color: var(--white);
+    cursor: pointer;
+}
 
 .formLabel {
     display: none;
