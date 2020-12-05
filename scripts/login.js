@@ -14,11 +14,12 @@ function validateLogin(event) {
 
     let myAccounts = JSON.parse(localStorage.getItem('accounts'));
 
+
     let checkAccEmail = myAccounts.find(myAcc => myAcc.email === email);
-    let checkAccPw = myAccounts.find(myAcc => myAcc.pw === pword);
+    let myPw = decrypt(checkAccEmail.pw).toString(CryptoJS.enc.Utf8);
     let userDetails = [];
 
-    if (typeof checkAccEmail === 'undefined' || typeof checkAccPw === 'undefined'){
+    if (myPw !== pword){
         document.querySelector('#accountAlert').innerText = 'Account details does not exist!';
         document.querySelector('#accountAlert').style.display = 'block';
         validForm = false;
@@ -28,6 +29,8 @@ function validateLogin(event) {
             userDetails.push(checkAccEmail)
             localStorage.setItem('userDetails', JSON.stringify(userDetails));
             localStorage.setItem('userToken', email.substring(0, email.lastIndexOf("@")) + Math.floor((Math.random() * 1000) + 1));
+            localStorage.setItem('smoker', checkAccEmail.smoker);
+            localStorage.setItem('status', checkAccEmail.status);
         }
     }
 
