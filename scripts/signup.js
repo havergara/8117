@@ -1,3 +1,4 @@
+
 signupForm.addEventListener('submit', validate);
 function validatePhoneNumber(input_str) {
     var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -93,7 +94,11 @@ function validate(a) {
         userDetails.age = signupForm.age.value;
         userDetails.address = signupForm.address.value;
         userDetails.email = signupForm.email.value;
-        userDetails.pw = signupForm.password.value;
+
+        let myPassword = signupForm.password.value;
+        let encrypted = CryptoJS.AES.encrypt(myPassword, 'password');
+        userDetails.pw = encrypted.toString();
+
         userDetails.phone = signupForm.phone.value;
         userDetails.occupation = signupForm.occupation.value;
         userDetails.title = signupForm.title.value;

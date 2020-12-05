@@ -46,6 +46,7 @@ th {
     border-bottom: solid 1px;
     background-color: var(--secondary);
     color: var(--white);
+    padding-left: 15px;
 }
 th:first-child {
     padding-left: 15px;
@@ -54,6 +55,7 @@ th:first-child {
 td {
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 15px;
     border-top: solid 1px var(--secondary);
     border-bottom: solid 1px var(--secondary);
 }

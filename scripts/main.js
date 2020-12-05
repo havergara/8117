@@ -176,6 +176,14 @@ myJSONForum = [
     }
 ];
 
+const encrypt = text => {
+    return CryptoJS.AES.encrypt(text, 'password')
+};
+
+const decrypt = data => {
+    return CryptoJS.AES.decrypt(data, 'password')
+};
+
 function generateTimeStamp(date) {
     var year = date.getFullYear();
     var month = date.getMonth();

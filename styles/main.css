@@ -150,7 +150,11 @@ p, a, li {
 }
 
 main {
-    margin: 0 20px;
+    /*margin: 0 20px;*/
+}
+
+#dashboardContainer, #forumContainer, #meditationContainer {
+    margin: 20px 20px;
 }
 
 footer {
@@ -163,6 +167,12 @@ footer {
     font-size: 17px;
     color: rgb(122, 114, 108);
     /* color: rgb(155, 127, 101); */
+    margin-top: 50px;
+}
+p{
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 50px;
 
 }
 a{
@@ -353,6 +363,10 @@ a{
     }
     .btnGroup input[type="submit"]:not(:first-child) {
         margin-left: 5px;
+    }
+
+    #developers div{
+        grid-column: span 4;
     }
 }
 

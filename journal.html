@@ -5,6 +5,7 @@
         <title>Mind-full-ness - Journal</title>
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/journal.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
@@ -38,29 +39,48 @@
 
             <section class="prompt">
 
-                <button id = "prompt">Get Different Prompt</button>
-                <h2 id="randomPrompt">What About your day was exciting?</h2>
+                <div id="journalContainer">
+                    <button id = "prompt">Get Different Prompt</button>
+                    <h2 id="randomPrompt">What About your day was exciting?</h2>
 
-                <form id="promptForm" method="get">
-                    <div class="formContainer">
-                        <span id="addressWarning" class="alert"></span>
-                        <textarea name="myday" id="myday" rows="5"></textarea>
-                    </div>
-                    <div class="alert" id="accountAlert"></div>
-                    <div class="formContainer">
-                        <div class="btnGroup">
-                            <input type="submit" id="save" value="Save">
-                            <input type="button" id="load" value="Load">
+                    <form id="promptForm" method="get">
+                        <div class="formContainer">
+                            <span id="addressWarning" class="alert"></span>
+                            <textarea name="myday" id="myday" rows="5"></textarea>
                         </div>
-                    </div>
-                </form>
+                        <div class="alert" id="accountAlert"></div>
+                        <div class="formContainer">
+                            <div class="btnGroup">
+                                <input type="submit" id="save" value="Save">
+                                <input type="button" id="load" value="Load">
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
             </section>
 
         </main>
 
         <footer>
-            [Footer]
+            <div class="brand">
+                <h1><a href="index.html">mindfullness</a></h1>
+                <span>keep your mind in mind</span>
+            </div>
+            <div class='infoFooter'>
+                <b>Contact:</b>
+                <div id="contactInfo">
+                    +411-523-5555 </br>
+                    <a href="mailto:happymind@happylife.com">happymind@happylife.com</br></a>
+                </div>
+
+            </div>
+            <p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </p>
+
         </footer>
 
         <script src="scripts/libs/jquery.js"></script>

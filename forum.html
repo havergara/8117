@@ -5,6 +5,7 @@
         <title>Mind-full-ness - Forum</title>
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/forum.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
@@ -37,22 +38,39 @@
         <main>
 
             <section class="forum">
-
-                <table class="forumTable" id="forumTableDiscussions">
-                    <tr>
-                        <th>General Discussions</th>
-                        <th class="notMobileColumn">Topics</th>
-                        <th class="notMobileColumn">Posts</th>
-                        <th class="notMobileColumn">Last Post</th>
-                    </tr>
-                </table>
-
+                <div id="forumContainer">
+                    <table class="forumTable" id="forumTableDiscussions">
+                        <tr>
+                            <th>General Discussions</th>
+                            <th class="notMobileColumn">Topics</th>
+                            <th class="notMobileColumn">Posts</th>
+                            <th class="notMobileColumn">Last Post</th>
+                        </tr>
+                    </table>
+                </div>
             </section>
 
         </main>
 
         <footer>
-            [Footer]
+            <div class="brand">
+                <h1><a href="index.html">mindfullness</a></h1>
+                <span>keep your mind in mind</span>
+            </div>
+            <div class='infoFooter'>
+                <b>Contact:</b>
+                <div id="contactInfo">
+                    +411-523-5555 </br>
+                    <a href="mailto:happymind@happylife.com">happymind@happylife.com</br></a>
+                </div>
+
+            </div>
+            <p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </p>
+
         </footer>
 
         <script src="scripts/libs/jquery.js"></script>
