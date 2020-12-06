@@ -237,6 +237,9 @@ a{
     color: var(--white);
     cursor: pointer;
 }
+.formContainer input[type='submit']:hover, .formContainer input[type='button']:hover, .formContainer input[type='reset']:hover {
+    background-color: var(--gray);
+}
 
 .formLabel {
     display: none;

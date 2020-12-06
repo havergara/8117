@@ -98,23 +98,26 @@ $(function(){
 
         forumTopicForm.addEventListener('submit', function (event){
             event.preventDefault();
-            let timeStamp = generateTimeStamp(new Date());
-            let myTopicObj = {
-                "id":(myTopic.topics.length+1).toString(), "title":forumTopicForm.topicTitle.value, "creator":localStorage.getItem('userFullName'), "dateCreated":timeStamp, "views":"0",
-                "responses": [
-                    {
-                        "title": this.topicTitle.value,
-                        "content": this.topicContent.value,
-                        "by":localStorage.getItem('userFullName'),
-                        "date":timeStamp
-                    }
-                ]
-            };
 
-            myTopic.topics.push(myTopicObj);
-            localStorage.setItem('forumJson', JSON.stringify(myJson));
-            forumTopicForm.reset();
-            window.location.reload();
+            if (this.topicTitle.value !== "" && this.topicContent.value !== "") {
+                let timeStamp = generateTimeStamp(new Date());
+                let myTopicObj = {
+                    "id":(myTopic.topics.length+1).toString(), "title":this.topicTitle.value, "creator":localStorage.getItem('userFullName'), "dateCreated":timeStamp, "views":"0",
+                    "responses": [
+                        {
+                            "title": this.topicTitle.value,
+                            "content": this.topicContent.value,
+                            "by":localStorage.getItem('userFullName'),
+                            "date":timeStamp
+                        }
+                    ]
+                };
+
+                myTopic.topics.push(myTopicObj);
+                localStorage.setItem('forumJson', JSON.stringify(myJson));
+                forumTopicForm.reset();
+                window.location.reload();
+            }
         })
 
     } else if (parseFloat(topicPage) === 1) {
@@ -127,19 +130,22 @@ $(function(){
 
         forumTopicResponseForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            let timeStamp = generateTimeStamp(new Date());
-            let responseTitle = 'Re: ' + myTopic.title;
-            let myResponseObj = {
-                "title":responseTitle,
-                "content": this.topicReply.value,
-                "by": localStorage.getItem('userFullName'),
-                "date": timeStamp
-            }
 
-            myTopicResponses.push(myResponseObj);
-            localStorage.setItem('forumJson', JSON.stringify(myJson));
-            forumTopicResponseForm.reset();
-            window.location.reload();
+            if (forumTopicResponseForm.topicReply.value !== "") {
+                let timeStamp = generateTimeStamp(new Date());
+                let responseTitle = 'Re: ' + myTopic.title;
+                let myResponseObj = {
+                    "title":responseTitle,
+                    "content": this.topicReply.value,
+                    "by": localStorage.getItem('userFullName'),
+                    "date": timeStamp
+                }
+
+                myTopicResponses.push(myResponseObj);
+                localStorage.setItem('forumJson', JSON.stringify(myJson));
+                forumTopicResponseForm.reset();
+                window.location.reload();
+            }
         });
     }
 
