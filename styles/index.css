@@ -13,6 +13,10 @@ h3 {
     padding-top: 30px;
 }
 
+.divider > h3{
+    color: rgb(42, 44, 42);
+}
+
 #about > img{
     height: 80px;
     padding-left: 50px;

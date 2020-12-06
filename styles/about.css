@@ -7,20 +7,22 @@
 #about h4 {
     font-weight: bold;
     color: rgb(252, 233, 215);
+    font-size: 1.4em;
 }
 #about p:not(:last-child) {
     margin-bottom: 40px;
 }
 
 #about h3{
-    font-size: 1.7em;
+    font-size: 2em;
     font-weight: bold;
     color: var(--white);
 }
 #about p {
     /* color: var(--white); */
-    color: var(--darkGray);
+    color: rgb(75, 67, 60);
     margin: 50px 0;
+    font-size: 1.5em;
 }
 
 #developers {
@@ -40,13 +42,21 @@
 #developers h3 {
     margin-bottom: 70px;
     color: var(--darkGray);
-
-    
+    font-size: 3em;  
+    font-family: didot; 
 }
 
 #developers p {
     /* color: var(--white); */
     color: var(--gray);
+    font-size: 1.5em;
+    padding-bottom: 5em;
+
+}
+#devs p{
+    color: var(--gray);
+    font-size: 1.5em;
+    padding: 0 0 10px 0;
 
 }
 /*

@@ -3,8 +3,8 @@ function startFunc(){
     document.getElementById('breath').removeEventListener("click", startFunc)
     document.getElementById("breath").innerHTML = "relax..."
     var index = 0;
-    var actions = ["Breath In","Breath In.","Breath In..","Breath In...",
-     "Hold","Hold.","Hold..","Hold...", "Breath Out","Breath Out.","Breath Out..","Breath Out...", "Hold","Hold.","Hold..","Hold..."];
+    var actions = ["Breathe In","Breathe In.","Breathe In..","Breathe In...",
+     "Hold","Hold.","Hold..","Hold...", "Breathe Out","Breathe Out.","Breathe Out..","Breathe Out...", "Hold","Hold.","Hold..","Hold..."];
     breathInterval = setInterval(function () {
         if (index < actions.length) {
             document.getElementById("breath").innerHTML = (actions[index])

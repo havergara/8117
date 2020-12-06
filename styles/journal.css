@@ -1,14 +1,86 @@
+.introBG{
+    background-color: #ED6B61;
+    background-size: cover;
+    height: 350px;
+}
+.centerfloater{
+    margin: auto;
+    text-align: center;
+    display: block;
+    color: rgb(255, 255, 255);
+
+}
+.centerfloater1{
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 7em;
+    display: block;
+    width: 70px;
+
+}
+
+#journalContainer > h1{
+    text-align: center;
+    padding: 0 0 1.5em 0;
+    font-family: didot;
+    font-style: italic;
+    font-size: 4em;
+    color: rgb(37,37,37)
+}
+
+#journalContainer > h1 {
+    position: relative;
+    font-size: 3.5em;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+#journalContainer > h1:after{
+    position: absolute;
+    top: 25%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(0, 0, 0);
+}
+#journalContainer > h1:before {
+    margin-left: -50%;
+    text-align: right;
+    position: absolute;
+    top: 25%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(0, 0, 0);
+}
+
 #randomPrompt {
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
+    font-family: didot;
+    font-size: 3em;
 }
 
 #prompt {
     background: none;
     border: none;
     cursor: pointer;
+    font-family: didot;
+    font-style: ;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 #prompt {
-    font-size: 1em;
+    font-size: 1.0em;
+    background-color: var(--primary);
+    
+
+}
+
+.btnGroup{
+    padding: 0 0 3em 0;
 }
