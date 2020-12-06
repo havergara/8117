@@ -2,7 +2,7 @@
 signupForm.addEventListener('submit', validate);
 function validatePhoneNumber(input_str) {
     var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    
+
     return re.test(input_str);
 }
 function validateEmail(input_str) {
@@ -144,10 +144,10 @@ function validate(a) {
 
         if (signupForm.status.options.selectedIndex === 1 || signupForm.status.options.selectedIndex === 4) {
             localStorage.setItem("status", "1")
-        }else{ 
+        }else{
             localStorage.setItem("status", "0")
         }
-        
+
        // alert(display)
     }
 
@@ -208,30 +208,30 @@ signupForm.occupation.addEventListener("change", function(){
     }
 });
 
-signupForm.querySelector('#title').addEventListener("click", function(){
+signupForm.querySelector('#title').addEventListener("blur", function(){
     if(signupForm.title.options.value != ""){
         titleWarning.innerHTML = "";
     }
 });
-signupForm.querySelector('#status').addEventListener("click", function(){
+signupForm.querySelector('#status').addEventListener("blur", function(){
     if(signupForm.status.options.value != ""){
         statusWarning.innerHTML = "";
     }
 });
 
-signupForm.querySelector('#smoker').addEventListener("click", function(){
+signupForm.querySelector('#smoker').addEventListener("blur", function(){
     if(signupForm.smoker.options.value != ""){
         smokerWarning.innerHTML = "";
     }
 });
 
-signupForm.querySelector('#therapist').addEventListener("click", function(){
+signupForm.querySelector('#therapist').addEventListener("blur", function(){
     if(signupForm.therapist.options.value != ""){
         therapistWarning.innerHTML = "";
     }
 });
 
-signupForm.querySelector('#physicalActivity').addEventListener("click", function(){
+signupForm.querySelector('#physicalActivity').addEventListener("blur", function(){
     if(signupForm.physicalActivity.options.value != ""){
         physicalActivityWarning.innerHTML = "";
     }
