@@ -186,14 +186,14 @@ const decrypt = data => {
 
 function generateTimeStamp(date) {
     var year = date.getFullYear();
-    var month = date.getMonth();
-    var day = date.getDay();
+    var month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth();
+    var day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? '0'+minutes : minutes;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
     var strTime = year + '/' + month + '/' + day + ' ' +hours + ':' + minutes + ' ' + ampm;
     return strTime;
 }
