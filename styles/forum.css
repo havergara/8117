@@ -131,6 +131,10 @@ td {
     color: var(--secondary);
 }
 
+.tblColOne p {
+    padding-bottom: 0;
+}
+
 .responseContainer {
     padding: 20px;
     border: solid 1px var(--secondary);
@@ -145,7 +149,9 @@ td {
     margin-bottom: 10px;
 }
 
-
+.responseContent p{
+    padding-bottom: 0;
+}
 
 
 /* Desktop/Laptop styles */

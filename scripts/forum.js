@@ -61,7 +61,7 @@ function loadResponses(topicResponses) {
             '                <div class="creatorMeta">\n' +
             '                    <small>by <i>'+ response.by +'</i> | '+ response.date +'</small>\n' +
             '                </div>\n' +
-            '                <div>\n' +
+            '                <div class="responseContent">\n' +
             '                    <p>'+ response.content +'</p>\n' +
             '                </div>';
         document.querySelector('#topicContainer').appendChild(myDiv);
