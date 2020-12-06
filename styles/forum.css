@@ -132,7 +132,7 @@ td {
 }
 
 .tblColOne p {
-    padding-bottom: 0;
+    padding: 0;
 }
 
 .responseContainer {
@@ -150,7 +150,7 @@ td {
 }
 
 .responseContent p{
-    padding-bottom: 0;
+    padding: 0;
 }
 
 
