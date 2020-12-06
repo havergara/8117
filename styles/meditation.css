@@ -1,6 +1,74 @@
 #breath {
-    font-size: 25pt;
-    color: navy;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5em;
+    color: rgb(37, 37, 37);
+    font-family: didot;
+    /* background-color: rgb(238,238,238); */
+    font-style: italic;
+    
   
+}
+#clickme > div{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0.3em 0 1em 0;
+}
+
+#clickme > div:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1.3em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+#clickme > div:hover:after {
+    opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  
+
+#clickme > div:hover {
+    -webkit-mask-image: linear-gradient(-95deg, rgba(0,0,0,.6) 30%, var(--primary) 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+  }
+  
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+
+.introBG{
+    background-color: #ED6B61;
+    background-size: cover;
+    height: 350px;
+}
+.centerfloater{
+    margin: auto;
+    text-align: center;
+    display: block;
+    color: rgb(255, 255, 255);
+
+}
+.centerfloater1{
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 7em;
+    display: block;
+    width: 70px;
+
 }

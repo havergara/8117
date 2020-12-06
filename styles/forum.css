@@ -1,3 +1,64 @@
+.introBG{
+    background-color: #ED6B61;
+    background-size: cover;
+    height: 350px;
+}
+.centerfloater{
+    margin: auto;
+    text-align: center;
+    display: block;
+    color: rgb(255, 255, 255);
+
+}
+.centerfloater1{
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 7em;
+    display: block;
+    width: 70px;
+
+}
+
+#introH > h2{
+    padding: 0.7em 0 1em 0;
+    text-align: center;
+    font-style: italic;
+    font-family: didot;
+    font-size: 4em;
+    color: rgb(37,37,37);
+    position: relative;
+    font-size: 3.5em;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#introH > h2:after{
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    width: 47%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(0, 0, 0);
+
+}
+#introH > h2:before{
+    margin-left: -50%;
+    text-align: right;
+    position: absolute;
+    top: 47%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(0, 0, 0);
+
+}
+
+
 .discussion {
     border: solid 1px var(--secondary);
 }
