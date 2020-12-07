@@ -1,5 +1,6 @@
 #about {
     padding: 60px;
+    padding-bottom: 30px;
     /* background-color:var(--blue); */
     background-color:var(--primary);
 
@@ -10,7 +11,7 @@
     font-size: 1.4em;
 }
 #about p:not(:last-child) {
-    margin-bottom: 40px;
+
 }
 
 #about h3{
@@ -21,8 +22,8 @@
 #about p {
     /* color: var(--white); */
     color: rgb(75, 67, 60);
-    margin: 50px 0;
-    font-size: 1.5em;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
 #developers {
@@ -34,8 +35,8 @@
     text-align: center;
 }
 #developers div img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: solid 1px #ccc;
 }
@@ -49,13 +50,11 @@
 #developers p {
     /* color: var(--white); */
     color: var(--gray);
-    font-size: 1.5em;
     padding-bottom: 5em;
 
 }
 #devs p{
     color: var(--gray);
-    font-size: 1.5em;
     padding: 0 0 10px 0;
     text-align: center;
 }
