@@ -15,7 +15,7 @@ h3 {
 
 .divider > h3{
     color: rgb(42, 44, 42);
-    text-shadow: 0 0 2px var(--white);
+    text-shadow: 0 0 6px var(--white);
     font-size: 2.3em;
     text-align: center;
 }
